@@ -1,0 +1,1395 @@
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 189,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "ini_set(): Session ini settings cannot be changed when a session is active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 203,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 4,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $total_errors",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 364,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Deprecated",
+    "message": "number_format(): Passing null to parameter #1 ($num) of type float is deprecated",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 364,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $unique_affected_users",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 371,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Deprecated",
+    "message": "number_format(): Passing null to parameter #1 ($num) of type float is deprecated",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 371,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 381,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 381,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Deprecated",
+    "message": "htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 381,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 386,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 386,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 387,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 387,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 388,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 388,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 389,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 389,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 395,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 395,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 396,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 396,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 397,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 397,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 398,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 398,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 399,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 399,
+    "timestamp": "2025-09-04 21:28:33",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 4,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $total_errors",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 364,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Deprecated",
+    "message": "number_format(): Passing null to parameter #1 ($num) of type float is deprecated",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 364,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $unique_affected_users",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 371,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Deprecated",
+    "message": "number_format(): Passing null to parameter #1 ($num) of type float is deprecated",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 371,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 381,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 381,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Deprecated",
+    "message": "htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 381,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 386,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 386,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 387,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 387,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 388,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 388,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 389,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 389,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 395,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 395,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 396,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 396,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 397,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 397,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 398,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 398,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $error_filters",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 399,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Trying to access array offset on value of type null",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\system_admin_dashboard.php",
+    "line": 399,
+    "timestamp": "2025-09-04 21:28:50",
+    "user_id": 1,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=system_admin_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:188)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 250,
+    "timestamp": "2025-09-04 21:28:59",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:188)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 167,
+    "timestamp": "2025-09-04 21:28:59",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 189,
+    "timestamp": "2025-09-04 21:29:28",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "ini_set(): Session ini settings cannot be changed when a session is active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 203,
+    "timestamp": "2025-09-04 21:29:28",
+    "user_id": 2,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Uncaught Exception",
+    "class": "ParseError",
+    "message": "syntax error, unexpected end of file, expecting \"elseif\" or \"else\" or \"endif\"",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\dashboard.php",
+    "line": 661,
+    "trace": "#0 {main}",
+    "timestamp": "2025-09-04 21:29:28",
+    "user_id": 2,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:188)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 102,
+    "timestamp": "2025-09-04 21:29:31",
+    "user_id": 2,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:188)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 250,
+    "timestamp": "2025-09-04 21:30:09",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:188)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 167,
+    "timestamp": "2025-09-04 21:30:09",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 189,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "ini_set(): Session ini settings cannot be changed when a session is active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 203,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 333,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 386,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 421,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 453,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 481,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 518,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 668,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 704,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 736,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 764,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 819,
+    "timestamp": "2025-09-04 21:30:30",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 333,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 386,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 421,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 453,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 481,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 518,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 668,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 704,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 736,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 764,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Undefined variable $csrf_token",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\cfo_dashboard.php",
+    "line": 819,
+    "timestamp": "2025-09-04 21:30:39",
+    "user_id": 3,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=cfo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 189,
+    "timestamp": "2025-09-04 23:23:25",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "ini_set(): Session ini settings cannot be changed when a session is active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 203,
+    "timestamp": "2025-09-04 23:23:25",
+    "user_id": 6,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 130,
+    "timestamp": "2025-09-04 23:23:25",
+    "user_id": 6,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 250,
+    "timestamp": "2025-09-04 23:24:02",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 188,
+    "timestamp": "2025-09-04 23:24:02",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 189,
+    "timestamp": "2025-09-04 23:24:21",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=member_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "ini_set(): Session ini settings cannot be changed when a session is active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 203,
+    "timestamp": "2025-09-04 23:24:21",
+    "user_id": 6,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=member_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 130,
+    "timestamp": "2025-09-04 23:24:21",
+    "user_id": 6,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 250,
+    "timestamp": "2025-09-04 23:44:26",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 188,
+    "timestamp": "2025-09-04 23:44:26",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 189,
+    "timestamp": "2025-09-04 23:44:45",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "ini_set(): Session ini settings cannot be changed when a session is active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 203,
+    "timestamp": "2025-09-04 23:44:45",
+    "user_id": 4,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 133,
+    "timestamp": "2025-09-04 23:44:45",
+    "user_id": 4,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Uncaught Exception",
+    "class": "Error",
+    "message": "Call to private method RBAC::getFinanceOfficerSummary() from global scope",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\fo_dashboard.php",
+    "line": 29,
+    "trace": "#0 C:\\xampp\\htdocs\\faithx-infinity\\index.php(147): include()\n#1 {main}",
+    "timestamp": "2025-09-04 23:44:47",
+    "user_id": 4,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=fo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Uncaught Exception",
+    "class": "Error",
+    "message": "Call to private method RBAC::getFinanceOfficerSummary() from global scope",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\fo_dashboard.php",
+    "line": 29,
+    "trace": "#0 C:\\xampp\\htdocs\\faithx-infinity\\index.php(153): include()\n#1 {main}",
+    "timestamp": "2025-09-04 23:55:07",
+    "user_id": 4,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=fo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Uncaught Exception",
+    "class": "Error",
+    "message": "Call to private method RBAC::getFinanceOfficerSummary() from global scope",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\views\\fo_dashboard.php",
+    "line": 29,
+    "trace": "#0 C:\\xampp\\htdocs\\faithx-infinity\\index.php(153): include()\n#1 {main}",
+    "timestamp": "2025-09-04 23:55:51",
+    "user_id": 4,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=fo_dashboard"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 250,
+    "timestamp": "2025-09-04 23:55:55",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 198,
+    "timestamp": "2025-09-04 23:55:55",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=logout"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Notice",
+    "message": "session_start(): Ignoring session_start() because a session is already active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 189,
+    "timestamp": "2025-09-04 23:56:15",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "ini_set(): Session ini settings cannot be changed when a session is active",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\includes\\auth.php",
+    "line": 203,
+    "timestamp": "2025-09-04 23:56:15",
+    "user_id": 6,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "PHP Error",
+    "severity": "Warning",
+    "message": "Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\faithx-infinity\\includes\\header.php:203)",
+    "file": "C:\\xampp\\htdocs\\faithx-infinity\\index.php",
+    "line": 131,
+    "timestamp": "2025-09-04 23:56:15",
+    "user_id": 6,
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36 Edg\/139.0.0.0",
+    "request_uri": "\/faithx-infinity\/index.php?page=dashboard"
+}
+--------------------------------------------------------------------------------
