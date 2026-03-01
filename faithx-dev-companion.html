@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FaithX Infinity — Dev Companion</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --surface: #111827;
+    --surface2: #1a2235;
+    --border: #1f2d45;
+    --accent: #00e5ff;
+    --accent2: #7c3aed;
+    --accent3: #10b981;
+    --warn: #f59e0b;
+    --danger: #ef4444;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Syne', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: rgba(10,14,26,0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-icon {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+
+  .logo h1 { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; }
+  .logo span { color: var(--accent); }
+
+  .badge-version {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: rgba(0,229,255,0.1);
+    border: 1px solid rgba(0,229,255,0.2);
+    color: var(--accent);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  .header-tabs {
+    display: flex;
+    gap: 4px;
+  }
+
+  .tab-btn {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+
+  .tab-btn:hover { color: var(--text); border-color: var(--border); }
+  .tab-btn.active {
+    background: rgba(0,229,255,0.1);
+    border-color: rgba(0,229,255,0.3);
+    color: var(--accent);
+  }
+
+  /* PANELS */
+  .panel { display: none; padding: 32px 0; }
+  .panel.active { display: block; }
+
+  /* SECTION HEADERS */
+  .section-title {
+    font-size: 0.7rem;
+    font-family: var(--font-mono);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover { border-color: var(--border); }
+
+  .card-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* GRID LAYOUTS */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+  @media (max-width: 900px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .grid-2 { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    .header-tabs { display: none; }
+    .mobile-tabs { display: flex !important; }
+  }
+
+  /* STATUS PILLS */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+
+  .pill.green { background: rgba(16,185,129,0.15); color: var(--accent3); border: 1px solid rgba(16,185,129,0.3); }
+  .pill.yellow { background: rgba(245,158,11,0.15); color: var(--warn); border: 1px solid rgba(245,158,11,0.3); }
+  .pill.red { background: rgba(239,68,68,0.15); color: var(--danger); border: 1px solid rgba(239,68,68,0.3); }
+  .pill.blue { background: rgba(0,229,255,0.1); color: var(--accent); border: 1px solid rgba(0,229,255,0.2); }
+  .pill.purple { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3); }
+
+  /* CODE BLOCKS */
+  .code-block {
+    background: #070b14;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.7;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  .code-block .comment { color: #4a5568; }
+  .code-block .keyword { color: #7c3aed; }
+  .code-block .string { color: #10b981; }
+  .code-block .func { color: #00e5ff; }
+  .code-block .var { color: #f59e0b; }
+
+  .copy-btn {
+    position: absolute;
+    top: 8px; right: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .copy-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+  }
+
+  .checklist li:hover { border-color: var(--border); }
+  .checklist li.done { opacity: 0.5; text-decoration: line-through; }
+
+  .check-box {
+    width: 18px; height: 18px;
+    border-radius: 4px;
+    border: 2px solid var(--border);
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+    margin-top: 1px;
+  }
+
+  .checklist li.done .check-box {
+    background: var(--accent3);
+    border-color: var(--accent3);
+  }
+
+  .check-icon { display: none; color: white; font-size: 11px; font-weight: 900; }
+  .checklist li.done .check-icon { display: block; }
+
+  .item-meta {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  /* PRIORITY BADGES */
+  .priority { font-family: var(--font-mono); font-size: 0.6rem; padding: 2px 6px; border-radius: 3px; margin-left: auto; flex-shrink: 0; }
+  .priority.high { background: rgba(239,68,68,0.2); color: var(--danger); }
+  .priority.med { background: rgba(245,158,11,0.2); color: var(--warn); }
+  .priority.low { background: rgba(16,185,129,0.2); color: var(--accent3); }
+
+  /* SETUP STEPS */
+  .step {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: var(--surface2);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+
+  .step-num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent2), var(--accent));
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+  .step-content p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+  /* PROGRESS */
+  .progress-bar {
+    height: 4px;
+    background: var(--surface2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    transition: width 0.5s ease;
+  }
+
+  /* FILE TREE */
+  .file-tree {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 2;
+  }
+
+  .file-tree .folder { color: var(--warn); }
+  .file-tree .file { color: var(--text); }
+  .file-tree .file.ok { color: var(--accent3); }
+  .file-tree .file.warn { color: var(--warn); }
+  .file-tree .file.issue { color: var(--danger); }
+  .file-tree .indent { padding-left: 20px; }
+  .file-tree .indent2 { padding-left: 40px; }
+
+  /* SECURITY TABLE */
+  .sec-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  .sec-table th {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sec-table td { padding: 10px 12px; border-bottom: 1px solid rgba(31,45,69,0.5); }
+  .sec-table tr:last-child td { border-bottom: none; }
+  .sec-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* MOBILE NAV */
+  .mobile-tabs {
+    display: none;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* STAT CARDS */
+  .stat-num {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label { font-size: 0.75rem; color: var(--muted); }
+
+  /* HIGHLIGHT */
+  .highlight-box {
+    background: rgba(0,229,255,0.05);
+    border: 1px solid rgba(0,229,255,0.15);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .highlight-box.warn-box {
+    background: rgba(245,158,11,0.05);
+    border-color: rgba(245,158,11,0.2);
+  }
+
+  .highlight-box.danger-box {
+    background: rgba(239,68,68,0.05);
+    border-color: rgba(239,68,68,0.2);
+  }
+
+  /* SPACER */
+  .mb-16 { margin-bottom: 16px; }
+  .mb-24 { margin-bottom: 24px; }
+  .mb-32 { margin-bottom: 32px; }
+
+  /* INLINE TAG */
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: var(--accent);
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* ANIMATE IN */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .panel.active > * { animation: fadeUp 0.3s ease forwards; }
+
+  /* PROGRESS TRACKER */
+  #progress-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  #progress-text { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+  #progress-count { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); font-weight: 700; }
+  #global-bar { flex: 1; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+  #global-fill { height: 100%; background: linear-gradient(90deg, var(--accent2), var(--accent)); border-radius: 3px; transition: width 0.4s ease; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">∞</div>
+        <div>
+          <h1>FaithX <span>Infinity</span></h1>
+        </div>
+        <span class="badge-version">DEV COMPANION</span>
+      </div>
+      <div class="header-tabs">
+        <button class="tab-btn active" onclick="switchTab('setup')">Setup</button>
+        <button class="tab-btn" onclick="switchTab('checklist')">Checklist</button>
+        <button class="tab-btn" onclick="switchTab('security')">Security</button>
+        <button class="tab-btn" onclick="switchTab('performance')">Performance</button>
+        <button class="tab-btn" onclick="switchTab('fixes')">Code Fixes</button>
+        <button class="tab-btn" onclick="switchTab('deploy')">Deploy</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile tabs -->
+<div class="container">
+  <div class="mobile-tabs" id="mobileTabs">
+    <button class="tab-btn active" onclick="switchTab('setup')">Setup</button>
+    <button class="tab-btn" onclick="switchTab('checklist')">Checklist</button>
+    <button class="tab-btn" onclick="switchTab('security')">Security</button>
+    <button class="tab-btn" onclick="switchTab('performance')">Performance</button>
+    <button class="tab-btn" onclick="switchTab('fixes')">Code Fixes</button>
+    <button class="tab-btn" onclick="switchTab('deploy')">Deploy</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ==================== SETUP ==================== -->
+  <div class="panel active" id="panel-setup">
+    <div class="section-title">Local Setup Guide</div>
+
+    <div class="grid-4 mb-24">
+      <div class="card">
+        <div class="stat-num" style="color:var(--accent)">3</div>
+        <div class="stat-label">Core Features Built</div>
+      </div>
+      <div class="card">
+        <div class="stat-num" style="color:var(--accent3)">11</div>
+        <div class="stat-label">API Endpoints</div>
+      </div>
+      <div class="card">
+        <div class="stat-num" style="color:var(--warn)">6</div>
+        <div class="stat-label">User Roles</div>
+      </div>
+      <div class="card">
+        <div class="stat-num" style="color:var(--danger)">8</div>
+        <div class="stat-label">Issues to Fix</div>
+      </div>
+    </div>
+
+    <div class="section-title">Step-by-Step Local Setup</div>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Prerequisites</h4>
+        <p>Download and install <strong>XAMPP</strong> (includes PHP + MySQL + Apache) and <strong>Git</strong>.</p>
+        <div class="code-block" style="margin-top:10px">
+          <span class="comment"># Download from:</span><br>
+          https://www.apachefriends.org  <span class="comment"># XAMPP</span><br>
+          https://git-scm.com           <span class="comment"># Git</span><br>
+          https://code.visualstudio.com <span class="comment"># VS Code (recommended editor)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Clone the Repository</h4>
+        <p>Open a terminal (or Git Bash on Windows) and run:</p>
+        <div class="code-block" style="margin-top:10px">
+          <button class="copy-btn" onclick="copyCode(this)">copy</button>
+          <span class="comment"># Navigate to XAMPP web folder</span><br>
+          <span class="keyword">cd</span> C:/xampp/htdocs          <span class="comment"># Windows</span><br>
+          <span class="comment"># cd /Applications/XAMPP/htdocs   # Mac</span><br><br>
+          <span class="comment"># Clone the repo</span><br>
+          git clone https://github.com/phoenix-2code/faithx-infinity-version-two.git faithx<br><br>
+          <span class="comment"># Enter the folder</span><br>
+          <span class="keyword">cd</span> faithx
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Create the Database</h4>
+        <p>Start XAMPP, open <strong>http://localhost/phpmyadmin</strong>, create a new database named <span class="tag">faithx_db</span>, then import your SQL schema file.</p>
+        <div class="code-block" style="margin-top:10px">
+          <span class="comment"># In phpMyAdmin:</span><br>
+          1. Click "New" in left sidebar<br>
+          2. Name it: <span class="string">faithx_db</span><br>
+          3. Collation: <span class="string">utf8mb4_unicode_ci</span><br>
+          4. Click "Import" tab → choose your .sql file
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Configure Database Connection</h4>
+        <p>Edit <span class="tag">config/database.php</span> with your local credentials:</p>
+        <div class="code-block" style="margin-top:10px">
+          <button class="copy-btn" onclick="copyCode(this)">copy</button>
+          <span class="keyword">&lt;?php</span><br>
+          <span class="var">$host</span> = <span class="string">'localhost'</span>;<br>
+          <span class="var">$dbname</span> = <span class="string">'faithx_db'</span>;<br>
+          <span class="var">$username</span> = <span class="string">'root'</span>;     <span class="comment">// XAMPP default</span><br>
+          <span class="var">$password</span> = <span class="string">''</span>;         <span class="comment">// XAMPP default (empty)</span><br><br>
+          <span class="keyword">try</span> {<br>
+          &nbsp;&nbsp;<span class="var">$pdo</span> = <span class="keyword">new</span> <span class="func">PDO</span>(<span class="string">"mysql:host=<span class="var">$host</span>;dbname=<span class="var">$dbname</span>;charset=utf8mb4"</span>, <span class="var">$username</span>, <span class="var">$password</span>);<br>
+          &nbsp;&nbsp;<span class="var">$pdo</span>-><span class="func">setAttribute</span>(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>
+          &nbsp;&nbsp;<span class="var">$pdo</span>-><span class="func">setAttribute</span>(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);<br>
+          } <span class="keyword">catch</span> (PDOException <span class="var">$e</span>) {<br>
+          &nbsp;&nbsp;<span class="func">die</span>(<span class="string">'DB connection failed: '</span> . <span class="var">$e</span>-><span class="func">getMessage</span>());<br>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>Visit & Test</h4>
+        <p>Open your browser and go to <span class="tag">http://localhost/faithx/</span>. Register a new account, login, and test all 3 core features.</p>
+        <div class="code-block" style="margin-top:10px">
+          <span class="comment"># Test URLs:</span><br>
+          http://localhost/faithx/                         <span class="comment"># Home</span><br>
+          http://localhost/faithx/index.php?page=register  <span class="comment"># Register</span><br>
+          http://localhost/faithx/index.php?page=pledges   <span class="comment"># Create pledge</span><br>
+          http://localhost/faithx/index.php?page=payments  <span class="comment"># Record payment</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <h4>Push Changes Back to GitHub</h4>
+        <p>After making improvements, push back to your repo:</p>
+        <div class="code-block" style="margin-top:10px">
+          <button class="copy-btn" onclick="copyCode(this)">copy</button>
+          git add .<br>
+          git commit -m <span class="string">"improve: security, performance, UI cleanup"</span><br>
+          git push origin main
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">Project File Structure</div>
+    <div class="card">
+      <div class="file-tree">
+        <div class="folder">📁 faithx-infinity/</div>
+        <div class="indent"><span class="file ok">✓ index.php</span> — main router</div>
+        <div class="indent"><span class="folder">📁 api/</span></div>
+        <div class="indent2"><span class="file ok">✓ pledge_actions.php</span> — create/delete pledges</div>
+        <div class="indent2"><span class="file ok">✓ payment_actions.php</span> — record payments</div>
+        <div class="indent2"><span class="file ok">✓ auth_actions.php</span> — login/register/profile</div>
+        <div class="indent2"><span class="file ok">✓ cfo_actions.php</span> — CFO CRUD</div>
+        <div class="indent2"><span class="file warn">⚠ fo_actions.php</span> — FO actions (incomplete update_pledge)</div>
+        <div class="indent2"><span class="file ok">✓ get_categories.php</span></div>
+        <div class="indent2"><span class="file ok">✓ reports_actions.php</span></div>
+        <div class="indent"><span class="folder">📁 views/</span></div>
+        <div class="indent2"><span class="file ok">✓ pledges.php</span> — feature 1 & 3</div>
+        <div class="indent2"><span class="file ok">✓ payments.php</span> — feature 2</div>
+        <div class="indent2"><span class="file ok">✓ member_dashboard.php</span></div>
+        <div class="indent2"><span class="file warn">⚠ member_payment_submission.php</span> — needs verification</div>
+        <div class="indent"><span class="folder">📁 includes/</span></div>
+        <div class="indent2"><span class="file ok">✓ auth.php</span> — AuthSystem class</div>
+        <div class="indent2"><span class="file ok">✓ functions.php</span> — helpers</div>
+        <div class="indent2"><span class="file ok">✓ rbac.php</span> — role access</div>
+        <div class="indent2"><span class="file ok">✓ header.php / footer.php</span></div>
+        <div class="indent"><span class="folder">📁 config/</span></div>
+        <div class="indent2"><span class="file warn">⚠ config.php</span> — check DEBUG_MODE is false in prod</div>
+        <div class="indent2"><span class="file ok">✓ database.php</span></div>
+        <div class="indent"><span class="folder">📁 assets/css/ assets/js/</span></div>
+        <div class="indent"><span class="folder">📁 logs/</span> — error logs (git-ignore this!)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CHECKLIST ==================== -->
+  <div class="panel" id="panel-checklist">
+    <div id="progress-summary">
+      <span id="progress-text">Progress:</span>
+      <span id="progress-count">0 / 0</span>
+      <div id="global-bar"><div id="global-fill" style="width:0%"></div></div>
+    </div>
+
+    <div class="section-title">🔴 Critical — Fix Before Submission</div>
+    <ul class="checklist" id="critical-list">
+      <li onclick="toggleCheck(this)" data-group="critical">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Fix error swallowing in pledge_actions.php</strong></div>
+          <div class="item-meta">Line ~100: generic message hides real errors. Use $e->getMessage() during dev.</div>
+        </div>
+        <span class="priority high">HIGH</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="critical">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Add CSRF token validation to pledge_actions.php & payment_actions.php</strong></div>
+          <div class="item-meta">cfo_actions.php validates CSRF but these two don't. Inconsistency = security hole.</div>
+        </div>
+        <span class="priority high">HIGH</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="critical">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Verify member profile is created on registration</strong></div>
+          <div class="item-meta">auth_actions.php inserts into both users and members — confirm members.user_id FK works.</div>
+        </div>
+        <span class="priority high">HIGH</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="critical">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Set DEBUG_MODE = false in config/config.php before submission</strong></div>
+          <div class="item-meta">Debug mode exposes stack traces and DB errors to users.</div>
+        </div>
+        <span class="priority high">HIGH</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="critical">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Ensure logs/ directory is in .gitignore</strong></div>
+          <div class="item-meta">logs/error.log may contain sensitive user data and server paths.</div>
+        </div>
+        <span class="priority high">HIGH</span>
+      </li>
+    </ul>
+
+    <div class="section-title mb-16" style="margin-top:24px">🟡 Important — Should Fix</div>
+    <ul class="checklist" id="important-list">
+      <li onclick="toggleCheck(this)" data-group="important">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Complete update_pledge case in fo_actions.php</strong></div>
+          <div class="item-meta">The case exists but has no update logic — just a comment and a permission check.</div>
+        </div>
+        <span class="priority med">MED</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="important">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Add amount_paid > pledge.amount validation in payment_actions.php</strong></div>
+          <div class="item-meta">Currently allows overpayments with no warning or cap.</div>
+        </div>
+        <span class="priority med">MED</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="important">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Confirm session_start() is not called twice in auth.php</strong></div>
+          <div class="item-meta">createSession() calls session_start() but index.php already started it. Will throw warnings.</div>
+        </div>
+        <span class="priority med">MED</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="important">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Add index on transactions.pledge_id</strong></div>
+          <div class="item-meta">Frequently queried with SUM(amount_paid). Missing index = slow as data grows.</div>
+        </div>
+        <span class="priority med">MED</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="important">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Add loading state to all form submit buttons</strong></div>
+          <div class="item-meta">No visual feedback while API calls are in progress. Users double-click and create duplicates.</div>
+        </div>
+        <span class="priority med">MED</span>
+      </li>
+    </ul>
+
+    <div class="section-title mb-16" style="margin-top:24px">🟢 Nice to Have</div>
+    <ul class="checklist" id="nice-list">
+      <li onclick="toggleCheck(this)" data-group="nice">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Add empty state UI when no pledges exist</strong></div>
+          <div class="item-meta">New members see a blank table. Add a friendly "Create your first pledge" prompt.</div>
+        </div>
+        <span class="priority low">LOW</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="nice">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Add pagination or limit to pledge list query</strong></div>
+          <div class="item-meta">No LIMIT on pledge fetch queries — unbounded result sets.</div>
+        </div>
+        <span class="priority low">LOW</span>
+      </li>
+      <li onclick="toggleCheck(this)" data-group="nice">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div>
+          <div><strong>Add README.md to repo</strong></div>
+          <div class="item-meta">Judges want to see setup instructions. Improves submission quality.</div>
+        </div>
+        <span class="priority low">LOW</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ==================== SECURITY ==================== -->
+  <div class="panel" id="panel-security">
+    <div class="section-title">Security Audit</div>
+
+    <div class="highlight-box danger-box mb-24">
+      <strong>⚠ 2 endpoints missing CSRF protection</strong> — pledge_actions.php and payment_actions.php accept POST requests without validating CSRF tokens, unlike cfo_actions.php which does it correctly.
+    </div>
+
+    <table class="sec-table mb-32">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Check</th>
+          <th>Status</th>
+          <th>Fix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag">pledge_actions.php</span></td>
+          <td>CSRF validation</td>
+          <td><span class="pill red">✗ Missing</span></td>
+          <td>Add validateCSRFToken() call</td>
+        </tr>
+        <tr>
+          <td><span class="tag">payment_actions.php</span></td>
+          <td>CSRF validation</td>
+          <td><span class="pill red">✗ Missing</span></td>
+          <td>Add validateCSRFToken() call</td>
+        </tr>
+        <tr>
+          <td><span class="tag">auth_actions.php</span></td>
+          <td>CSRF validation</td>
+          <td><span class="pill yellow">~ Partial</span></td>
+          <td>Login doesn't need it, but profile update does</td>
+        </tr>
+        <tr>
+          <td><span class="tag">cfo_actions.php</span></td>
+          <td>CSRF validation</td>
+          <td><span class="pill green">✓ OK</span></td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><span class="tag">pledge_actions.php</span></td>
+          <td>Input sanitization</td>
+          <td><span class="pill green">✓ OK</span></td>
+          <td>Uses sanitize() helper</td>
+        </tr>
+        <tr>
+          <td><span class="tag">payment_actions.php</span></td>
+          <td>Input sanitization</td>
+          <td><span class="pill green">✓ OK</span></td>
+          <td>Uses sanitize() helper</td>
+        </tr>
+        <tr>
+          <td><span class="tag">all api/*.php</span></td>
+          <td>Auth check (isLoggedIn)</td>
+          <td><span class="pill green">✓ OK</span></td>
+          <td>All endpoints check session</td>
+        </tr>
+        <tr>
+          <td><span class="tag">index.php</span></td>
+          <td>Role-based routing</td>
+          <td><span class="pill green">✓ OK</span></td>
+          <td>$page_access array handles all pages</td>
+        </tr>
+        <tr>
+          <td><span class="tag">auth.php</span></td>
+          <td>Account lockout</td>
+          <td><span class="pill green">✓ OK</span></td>
+          <td>5 attempts then lockout</td>
+        </tr>
+        <tr>
+          <td><span class="tag">auth.php</span></td>
+          <td>Password hashing</td>
+          <td><span class="pill green">✓ OK</span></td>
+          <td>password_hash(PASSWORD_DEFAULT)</td>
+        </tr>
+        <tr>
+          <td><span class="tag">config.php</span></td>
+          <td>DEBUG_MODE in prod</td>
+          <td><span class="pill yellow">~ Check</span></td>
+          <td>Must be false before submission/deploy</td>
+        </tr>
+        <tr>
+          <td><span class="tag">logs/</span></td>
+          <td>Sensitive log exposure</span></td>
+          <td><span class="pill yellow">~ Check</span></td>
+          <td>Add to .gitignore</td>
+        </tr>
+        <tr>
+          <td><span class="tag">export_data.php</span></td>
+          <td>Role check</td>
+          <td><span class="pill green">✓ OK</span></td>
+          <td>Finance roles only</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title">CSRF Fix — Add to pledge_actions.php & payment_actions.php</div>
+    <div class="code-block mb-24">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="comment">// Add this RIGHT AFTER reading $input, before the switch statement</span><br>
+      <span class="comment">// In both pledge_actions.php and payment_actions.php:</span><br><br>
+
+      <span class="var">$csrf_token</span> = <span class="var">$input</span>[<span class="string">'csrf_token'</span>] ?? <span class="string">''</span>;<br><br>
+
+      <span class="keyword">if</span> (!<span class="func">verifyCSRFToken</span>(<span class="var">$csrf_token</span>)) {<br>
+      &nbsp;&nbsp;http_response_code(<span class="string">403</span>);<br>
+      &nbsp;&nbsp;<span class="keyword">echo</span> json_encode([<span class="string">'success'</span> => <span class="keyword">false</span>, <span class="string">'message'</span> => <span class="string">'Security token invalid. Please refresh the page.'</span>]);<br>
+      &nbsp;&nbsp;<span class="keyword">exit</span>;<br>
+      }<br><br>
+
+      <span class="comment">// Then in your JS fetch calls, add csrf_token to the body:</span><br>
+      <span class="comment">// csrf_token: document.querySelector('meta[name="csrf-token"]').content</span><br><br>
+
+      <span class="comment">// Add this to includes/header.php inside &lt;head&gt;:</span><br>
+      &lt;meta name=<span class="string">"csrf-token"</span> content=<span class="string">"&lt;?= generateCSRFToken() ?&gt;"</span>&gt;
+    </div>
+
+    <div class="section-title">Overpayment Guard — Add to payment_actions.php</div>
+    <div class="code-block">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="comment">// Add BEFORE inserting the transaction:</span><br><br>
+
+      <span class="comment">// Get pledge amount and current total paid</span><br>
+      <span class="var">$stmt</span> = <span class="var">$pdo</span>-><span class="func">prepare</span>(<span class="string">"<br>
+      &nbsp;&nbsp;SELECT p.amount,<br>
+      &nbsp;&nbsp;COALESCE(SUM(t.amount_paid), 0) as already_paid<br>
+      &nbsp;&nbsp;FROM pledges p<br>
+      &nbsp;&nbsp;LEFT JOIN transactions t ON p.pledge_id = t.pledge_id<br>
+      &nbsp;&nbsp;WHERE p.pledge_id = ?<br>
+      &nbsp;&nbsp;GROUP BY p.pledge_id<br>
+      "</span>);<br>
+      <span class="var">$stmt</span>-><span class="func">execute</span>([<span class="var">$pledge_id</span>]);<br>
+      <span class="var">$pledge</span> = <span class="var">$stmt</span>-><span class="func">fetch</span>();<br><br>
+
+      <span class="keyword">if</span> (!<span class="var">$pledge</span>) <span class="keyword">throw new</span> <span class="func">Exception</span>(<span class="string">'Pledge not found.'</span>);<br><br>
+
+      <span class="var">$remaining</span> = <span class="var">$pledge</span>[<span class="string">'amount'</span>] - <span class="var">$pledge</span>[<span class="string">'already_paid'</span>];<br><br>
+
+      <span class="keyword">if</span> (<span class="var">$amount_paid</span> > <span class="var">$remaining</span>) {<br>
+      &nbsp;&nbsp;<span class="keyword">throw new</span> <span class="func">Exception</span>(<span class="string">'Payment exceeds remaining balance of KSh '</span> . <span class="func">number_format</span>(<span class="var">$remaining</span>, <span class="string">2</span>));<br>
+      }
+    </div>
+  </div>
+
+  <!-- ==================== PERFORMANCE ==================== -->
+  <div class="panel" id="panel-performance">
+    <div class="section-title">Performance Issues</div>
+
+    <div class="grid-2 mb-24">
+      <div class="card">
+        <div class="card-title">🐌 Missing DB Indexes</div>
+        <p style="font-size:0.82rem; color:var(--muted); margin-bottom:12px">These columns are queried frequently but likely have no index. Add them to your schema.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">copy</button>
+          <span class="comment">-- Run in phpMyAdmin SQL tab:</span><br><br>
+          <span class="keyword">ALTER TABLE</span> transactions<br>
+          &nbsp;&nbsp;<span class="func">ADD INDEX</span> idx_pledge_id (pledge_id);<br><br>
+          <span class="keyword">ALTER TABLE</span> pledges<br>
+          &nbsp;&nbsp;<span class="func">ADD INDEX</span> idx_member_id (member_id),<br>
+          &nbsp;&nbsp;<span class="func">ADD INDEX</span> idx_status (status),<br>
+          &nbsp;&nbsp;<span class="func">ADD INDEX</span> idx_group_id (group_id);<br><br>
+          <span class="keyword">ALTER TABLE</span> members<br>
+          &nbsp;&nbsp;<span class="func">ADD INDEX</span> idx_user_id (user_id);
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">🔄 Double Query in payment_actions.php</div>
+        <p style="font-size:0.82rem; color:var(--muted); margin-bottom:12px">After recording payment, code runs 2 separate queries to check if pledge is fully paid. Combine into one.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">copy</button>
+          <span class="comment">// REPLACE the two separate queries with this single one:</span><br><br>
+          <span class="var">$stmt</span> = <span class="var">$pdo</span>-><span class="func">prepare</span>(<span class="string">"<br>
+          &nbsp;&nbsp;SELECT p.amount,<br>
+          &nbsp;&nbsp;COALESCE(SUM(t.amount_paid), 0) as total_paid<br>
+          &nbsp;&nbsp;FROM pledges p<br>
+          &nbsp;&nbsp;LEFT JOIN transactions t ON p.pledge_id = t.pledge_id<br>
+          &nbsp;&nbsp;WHERE p.pledge_id = ?<br>
+          &nbsp;&nbsp;GROUP BY p.pledge_id<br>
+          "</span>);<br>
+          <span class="var">$stmt</span>-><span class="func">execute</span>([<span class="var">$pledge_id</span>]);<br>
+          <span class="var">$result</span> = <span class="var">$stmt</span>-><span class="func">fetch</span>();<br><br>
+          <span class="keyword">if</span> (<span class="var">$result</span>[<span class="string">'total_paid'</span>] >= <span class="var">$result</span>[<span class="string">'amount'</span>]) {<br>
+          &nbsp;&nbsp;<span class="comment">// mark complete</span><br>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">session_start() Double-Call Fix</div>
+    <div class="highlight-box warn-box mb-16">
+      <strong>Issue:</strong> <span class="tag">index.php</span> calls <code>session_start()</code> at the top. Then <span class="tag">auth.php</span> <code>createSession()</code> also calls <code>session_start()</code>. This causes PHP warnings.
+    </div>
+    <div class="code-block mb-32">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="comment">// In includes/auth.php — replace createSession() session_start() with a check:</span><br><br>
+      <span class="keyword">private function</span> <span class="func">createSession</span>(<span class="var">$user</span>, <span class="var">$effective_role</span>) {<br>
+      &nbsp;&nbsp;<span class="comment">// Only start session if not already started</span><br>
+      &nbsp;&nbsp;<span class="keyword">if</span> (session_status() === PHP_SESSION_NONE) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="func">session_start</span>();<br>
+      &nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;<span class="func">session_regenerate_id</span>(<span class="keyword">true</span>);<br>
+      &nbsp;&nbsp;<span class="comment">// ... rest of the function</span><br>
+      }
+    </div>
+
+    <div class="section-title">Loading State for Buttons (JS)</div>
+    <div class="code-block">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="comment">// Add this to assets/js/main.js — prevents double-submit on all API forms</span><br><br>
+      <span class="keyword">function</span> <span class="func">setLoading</span>(<span class="var">btn</span>, <span class="var">loading</span>) {<br>
+      &nbsp;&nbsp;<span class="keyword">if</span> (<span class="var">loading</span>) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="var">btn</span>.disabled = <span class="keyword">true</span>;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="var">btn</span>.dataset.original = <span class="var">btn</span>.innerHTML;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="var">btn</span>.innerHTML = <span class="string">'&lt;span class="spinner-border spinner-border-sm me-2"&gt;&lt;/span&gt;Processing...'</span>;<br>
+      &nbsp;&nbsp;} <span class="keyword">else</span> {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="var">btn</span>.disabled = <span class="keyword">false</span>;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="var">btn</span>.innerHTML = <span class="var">btn</span>.dataset.original;<br>
+      &nbsp;&nbsp;}<br>
+      }<br><br>
+      <span class="comment">// Usage — in any form submit handler:</span><br>
+      <span class="keyword">const</span> <span class="var">submitBtn</span> = document.<span class="func">getElementById</span>(<span class="string">'submitPledgeBtn'</span>);<br>
+      <span class="func">setLoading</span>(<span class="var">submitBtn</span>, <span class="keyword">true</span>);<br>
+      <span class="comment">// ... after fetch resolves:</span><br>
+      <span class="func">setLoading</span>(<span class="var">submitBtn</span>, <span class="keyword">false</span>);
+    </div>
+  </div>
+
+  <!-- ==================== CODE FIXES ==================== -->
+  <div class="panel" id="panel-fixes">
+    <div class="section-title">Ready-to-Use Code Fixes</div>
+
+    <div class="section-title" style="margin-top:8px">1. .gitignore — Create this file in repo root</div>
+    <div class="code-block mb-24">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="comment"># FaithX Infinity .gitignore</span><br><br>
+      <span class="comment"># Logs — contain sensitive data</span><br>
+      logs/<br>
+      *.log<br><br>
+      <span class="comment"># Config with real credentials</span><br>
+      config/database.php<br><br>
+      <span class="comment"># Keep a template</span><br>
+      !config/database.example.php<br><br>
+      <span class="comment"># OS files</span><br>
+      .DS_Store<br>
+      Thumbs.db<br><br>
+      <span class="comment"># IDE files</span><br>
+      .vscode/<br>
+      .idea/<br><br>
+      <span class="comment"># PHP cache</span><br>
+      *.cache
+    </div>
+
+    <div class="section-title">2. config/database.example.php — Template for new devs</div>
+    <div class="code-block mb-24">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="keyword">&lt;?php</span><br>
+      <span class="comment">// Copy this file to database.php and fill in your credentials</span><br>
+      <span class="var">$host</span> = <span class="string">'localhost'</span>;<br>
+      <span class="var">$dbname</span> = <span class="string">'faithx_db'</span>;<br>
+      <span class="var">$db_username</span> = <span class="string">'root'</span>;<br>
+      <span class="var">$db_password</span> = <span class="string">''</span>;<br><br>
+      <span class="keyword">try</span> {<br>
+      &nbsp;&nbsp;<span class="var">$pdo</span> = <span class="keyword">new</span> <span class="func">PDO</span>(<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"mysql:host={$host};dbname={$dbname};charset=utf8mb4"</span>,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="var">$db_username</span>, <span class="var">$db_password</span>,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PDO::ATTR_EMULATE_PREPARES => <span class="keyword">false</span>]<br>
+      &nbsp;&nbsp;);<br>
+      } <span class="keyword">catch</span> (PDOException <span class="var">$e</span>) {<br>
+      &nbsp;&nbsp;<span class="func">error_log</span>(<span class="string">'DB Error: '</span> . <span class="var">$e</span>-><span class="func">getMessage</span>());<br>
+      &nbsp;&nbsp;<span class="func">die</span>(<span class="string">'Database connection failed.'</span>);<br>
+      }
+    </div>
+
+    <div class="section-title">3. Empty State UI — Paste into views/pledges.php</div>
+    <div class="code-block mb-24">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="comment">&lt;!-- Replace the "no pledges" part of your table with this: --&gt;</span><br>
+      &lt;<span class="keyword">?php</span> <span class="keyword">if</span> (empty(<span class="var">$pledges</span>)): <span class="keyword">?&gt;</span><br>
+      &lt;div class=<span class="string">"text-center py-5"</span>&gt;<br>
+      &nbsp;&nbsp;&lt;i class=<span class="string">"bi bi-gift display-4 text-muted"</span>&gt;&lt;/i&gt;<br>
+      &nbsp;&nbsp;&lt;h5 class=<span class="string">"mt-3 text-muted"</span>&gt;No pledges yet&lt;/h5&gt;<br>
+      &nbsp;&nbsp;&lt;p class=<span class="string">"text-muted"</span>&gt;Make your first commitment to the community.&lt;/p&gt;<br>
+      &nbsp;&nbsp;&lt;button class=<span class="string">"btn btn-primary"</span> data-bs-toggle=<span class="string">"modal"</span> data-bs-target=<span class="string">"#createPledgeModal"</span>&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;i class=<span class="string">"bi bi-plus-circle"</span>&gt;&lt;/i&gt; Create Your First Pledge<br>
+      &nbsp;&nbsp;&lt;/button&gt;<br>
+      &lt;/div&gt;<br>
+      &lt;<span class="keyword">?php</span> endif; <span class="keyword">?&gt;</span>
+    </div>
+
+    <div class="section-title">4. README.md — Drop this in repo root</div>
+    <div class="code-block">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="comment"># FaithX Infinity ∞</span><br>
+      Church pledge management system — built for the DEV Weekend Challenge.<br><br>
+      <span class="comment">## Features</span><br>
+      - ✅ Create pledges (members commit to amounts)<br>
+      - ✅ Record payments against pledges<br>
+      - ✅ View pledge status with progress tracking<br>
+      - 🔒 Role-based access (Member, Finance Officer, CFO, Admin)<br><br>
+      <span class="comment">## Setup</span><br>
+      ```bash<br>
+      git clone https://github.com/phoenix-2code/faithx-infinity-version-two.git<br>
+      cd faithx-infinity-version-two<br>
+      cp config/database.example.php config/database.php<br>
+      # Edit database.php with your credentials<br>
+      # Import database/schema.sql into MySQL<br>
+      ```<br><br>
+      <span class="comment">## Tech Stack</span><br>
+      PHP 8+ · MySQL · Bootstrap 5 · Vanilla JS<br><br>
+      <span class="comment">## Built By</span><br>
+      phoenix-2code — DEV Weekend Challenge Feb 2026
+    </div>
+  </div>
+
+  <!-- ==================== DEPLOY ==================== -->
+  <div class="panel" id="panel-deploy">
+    <div class="section-title">Deployment Options</div>
+
+    <div class="grid-3 mb-32">
+      <div class="card">
+        <div class="card-title"><span style="color:var(--accent3)">●</span> Railway <span class="pill green">Recommended</span></div>
+        <p style="font-size:0.8rem; color:var(--muted); margin-bottom:12px">Connect GitHub repo, auto-deploy on push. Includes MySQL. Free tier available.</p>
+        <ol style="font-size:0.8rem; line-height:2; padding-left:16px;">
+          <li>Go to railway.app</li>
+          <li>New Project → Deploy from GitHub</li>
+          <li>Add MySQL plugin</li>
+          <li>Set environment variables</li>
+          <li>Deploy ✓</li>
+        </ol>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color:var(--warn)">●</span> InfinityFree <span class="pill yellow">Free</span></div>
+        <p style="font-size:0.8rem; color:var(--muted); margin-bottom:12px">Free PHP hosting with MySQL. Slower but zero cost.</p>
+        <ol style="font-size:0.8rem; line-height:2; padding-left:16px;">
+          <li>Register at infinityfree.net</li>
+          <li>Create hosting account</li>
+          <li>Upload files via File Manager</li>
+          <li>Create MySQL DB in control panel</li>
+          <li>Import schema</li>
+        </ol>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color:var(--accent2)">●</span> Render <span class="pill purple">Easy</span></div>
+        <p style="font-size:0.8rem; color:var(--muted); margin-bottom:12px">Connect GitHub, add a PostgreSQL or MySQL database. Free tier with sleep on inactivity.</p>
+        <ol style="font-size:0.8rem; line-height:2; padding-left:16px;">
+          <li>Go to render.com</li>
+          <li>New → Web Service</li>
+          <li>Connect GitHub repo</li>
+          <li>Add MySQL database</li>
+          <li>Set env vars → Deploy</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="section-title">Pre-Deploy Checklist</div>
+    <ul class="checklist">
+      <li onclick="toggleCheck(this)">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div><strong>DEBUG_MODE = false in config/config.php</strong></div>
+        <span class="priority high">HIGH</span>
+      </li>
+      <li onclick="toggleCheck(this)">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div><strong>config/database.php uses environment variables, not hardcoded credentials</strong></div>
+        <span class="priority high">HIGH</span>
+      </li>
+      <li onclick="toggleCheck(this)">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div><strong>logs/ is in .gitignore</strong></div>
+        <span class="priority high">HIGH</span>
+      </li>
+      <li onclick="toggleCheck(this)">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div><strong>Database schema SQL file is in /database/ folder in repo</strong></div>
+        <span class="priority med">MED</span>
+      </li>
+      <li onclick="toggleCheck(this)">
+        <div class="check-box"><span class="check-icon">✓</span></div>
+        <div><strong>README.md exists and explains how to set up</strong></div>
+        <span class="priority low">LOW</span>
+      </li>
+    </ul>
+
+    <div class="section-title" style="margin-top:24px">Environment Variables for Production</div>
+    <div class="code-block">
+      <button class="copy-btn" onclick="copyCode(this)">copy</button>
+      <span class="comment"># Set these in Railway/Render dashboard, not in code:</span><br><br>
+      DB_HOST=your-db-host<br>
+      DB_NAME=faithx_db<br>
+      DB_USER=your-db-user<br>
+      DB_PASS=your-db-password<br>
+      DEBUG_MODE=false<br><br>
+      <span class="comment"># Then in config/database.php use:</span><br>
+      <span class="var">$host</span> = <span class="func">getenv</span>(<span class="string">'DB_HOST'</span>) ?: <span class="string">'localhost'</span>;<br>
+      <span class="var">$dbname</span> = <span class="func">getenv</span>(<span class="string">'DB_NAME'</span>) ?: <span class="string">'faithx_db'</span>;<br>
+      <span class="var">$username</span> = <span class="func">getenv</span>(<span class="string">'DB_USER'</span>) ?: <span class="string">'root'</span>;<br>
+      <span class="var">$password</span> = <span class="func">getenv</span>(<span class="string">'DB_PASS'</span>) ?: <span class="string">''</span>;
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+  function switchTab(tab) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + tab).classList.add('active');
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      if (b.textContent.toLowerCase().replace(/\s/g,'') === tab) b.classList.add('active');
+    });
+    updateProgress();
+  }
+
+  function toggleCheck(el) {
+    el.classList.toggle('done');
+    updateProgress();
+    saveState();
+  }
+
+  function updateProgress() {
+    const all = document.querySelectorAll('.checklist li');
+    const done = document.querySelectorAll('.checklist li.done');
+    const total = all.length;
+    const count = done.length;
+    const pct = total > 0 ? Math.round((count / total) * 100) : 0;
+    document.getElementById('progress-count').textContent = count + ' / ' + total;
+    document.getElementById('global-fill').style.width = pct + '%';
+  }
+
+  function saveState() {
+    const state = {};
+    document.querySelectorAll('.checklist li').forEach((li, i) => {
+      state['item_' + i] = li.classList.contains('done');
+    });
+    try { localStorage.setItem('faithx_checklist', JSON.stringify(state)); } catch(e) {}
+  }
+
+  function loadState() {
+    try {
+      const state = JSON.parse(localStorage.getItem('faithx_checklist') || '{}');
+      document.querySelectorAll('.checklist li').forEach((li, i) => {
+        if (state['item_' + i]) li.classList.add('done');
+      });
+    } catch(e) {}
+    updateProgress();
+  }
+
+  function copyCode(btn) {
+    const block = btn.parentElement;
+    const text = block.innerText.replace('copy\n', '').trim();
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'copied!';
+      btn.style.color = 'var(--accent3)';
+      setTimeout(() => { btn.textContent = 'copy'; btn.style.color = ''; }, 2000);
+    });
+  }
+
+  loadState();
+</script>
+</body>
+</html>

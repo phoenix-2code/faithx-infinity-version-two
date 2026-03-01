@@ -509,12 +509,14 @@ CREATE INDEX idx_pledges_status ON pledges(status);
 CREATE INDEX idx_pledges_due_date ON pledges(due_date);
 CREATE INDEX idx_pledges_member_id ON pledges(member_id);
 CREATE INDEX idx_pledges_category_id ON pledges(category_id);
+CREATE INDEX idx_pledges_group_id ON pledges(group_id);
 CREATE INDEX idx_transactions_pledge_id ON transactions(pledge_id);
 CREATE INDEX idx_transactions_payment_date ON transactions(payment_date);
 CREATE INDEX idx_users_role ON users(role);
 CREATE INDEX idx_users_username ON users(username);
 CREATE INDEX idx_audit_logs_user_id ON audit_logs(user_id);
 CREATE INDEX idx_audit_logs_created_at ON audit_logs(created_at);
+CREATE INDEX idx_members_user_id ON members(user_id);
 
 -- Note: All demo accounts use password 'FaithX2025!' for security
 -- In production, use unique, strong passwords for each account

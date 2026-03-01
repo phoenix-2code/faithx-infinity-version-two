@@ -16,6 +16,13 @@ if (!isLoggedIn()) {
 
 $input = json_decode(file_get_contents('php://input'), true);
 $action = $input['action'] ?? '';
+$csrf_token = $input['csrf_token'] ?? '';
+
+if (!verifyCSRFToken($csrf_token)) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Security token invalid. Please refresh the page.']);
+    exit;
+}
 
 header('Content-Type: application/json');
 
@@ -33,6 +40,25 @@ try {
                 throw new Exception('Please fill in all required fields with valid values.');
             }
 
+            $stmt = $pdo->prepare("
+                SELECT p.amount,
+                COALESCE(SUM(t.amount_paid), 0) as already_paid
+                FROM pledges p
+                LEFT JOIN transactions t ON p.pledge_id = t.pledge_id
+                WHERE p.pledge_id = ?
+                GROUP BY p.pledge_id
+            ");
+            $stmt->execute([$pledge_id]);
+            $pledgeData = $stmt->fetch();
+
+            if (!$pledgeData) throw new Exception('Pledge not found.');
+
+            $remaining = $pledgeData['amount'] - $pledgeData['already_paid'];
+
+            if ($amount_paid > $remaining) {
+                throw new Exception('Payment exceeds remaining balance of KSh ' . number_format($remaining, 2));
+            }
+
             // Create the transaction
             $stmt = $pdo->prepare("
                 INSERT INTO transactions (pledge_id, amount_paid, payment_method, payment_date, reference_number, notes, recorded_by)
@@ -40,12 +66,10 @@ try {
             ");
 
             if ($stmt->execute([$pledge_id, $amount_paid, $payment_method, $payment_date, $reference_number, $notes, $_SESSION['user_id']])) {
-                // Update pledge status if fully paid
-                $stmt = $pdo->prepare("SELECT amount, COALESCE(SUM(t.amount_paid), 0) as total_paid FROM pledges p LEFT JOIN transactions t ON p.pledge_id = t.pledge_id WHERE p.pledge_id = ? GROUP BY p.pledge_id");
-                $stmt->execute([$pledge_id]);
-                $pledge = $stmt->fetch(PDO::FETCH_ASSOC);
+                // Determine if fully paid using our previously fetched data
+                $new_total_paid = $pledgeData['already_paid'] + $amount_paid;
 
-                if ($pledge && $pledge['total_paid'] >= $pledge['amount']) {
+                if ($new_total_paid >= $pledgeData['amount']) {
                     $stmt = $pdo->prepare("UPDATE pledges SET status = 'completed' WHERE pledge_id = ?");
                     $stmt->execute([$pledge_id]);
                 }

@@ -61,7 +61,8 @@ try {
             }
 
             // Begin transaction
-            $pdo->beginTransaction();
+            try {
+                $pdo->beginTransaction();
 
             // Insert into users table (default role: member)
             $stmt = $pdo->prepare("
@@ -104,7 +105,11 @@ try {
             notifyAdminsNewRegistration($pdo, $user_id, $username, $first_name . ' ' . $last_name);
 
             echo json_encode(['success' => true, 'message' => 'Registration successful! You can now log in with your credentials.']);
-            break;
+        } catch (Exception $e) {
+            $pdo->rollBack();
+            throw $e;
+        }
+        break;
 
         case 'update_profile':
             if (!isLoggedIn()) {

@@ -230,6 +230,7 @@ $csrf_token = generateCSRFToken();
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="action" value="create_pledge">
+                    <input type="hidden" name="csrf_token" value="<?= $csrf_token ?>">
                     
                     <div class="row">
                         <div class="col-md-6">
@@ -331,6 +332,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const createPledgeForm = document.getElementById('createPledgeForm');
     createPledgeForm.addEventListener('submit', function (e) {
         e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        FaithXUtils.showLoading(submitBtn);
+
         const formData = new FormData(createPledgeForm);
         const data = Object.fromEntries(formData.entries());
 
@@ -343,12 +348,19 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.json())
         .then(result => {
+            FaithXUtils.hideLoading(submitBtn, '<i class="bi bi-check-circle"></i> Create Pledge');
             const modal = bootstrap.Modal.getInstance(document.getElementById('createPledgeModal'));
             modal.hide();
+            
             showFeedback(result.success ? 'Success' : 'Error', result.message, result.success);
             if (result.success) {
                 setTimeout(() => location.reload(), 2000);
             }
+        })
+        .catch(error => {
+            FaithXUtils.hideLoading(submitBtn, '<i class="bi bi-check-circle"></i> Create Pledge');
+            console.error('Error creating pledge:', error);
+            showFeedback('Error', 'An unexpected error occurred. Please try again.', false);
         });
     });
 
@@ -357,8 +369,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if(editPledgeForm) {
         editPledgeForm.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            FaithXUtils.showLoading(submitBtn);
+
             const formData = new FormData(editPledgeForm);
             const data = Object.fromEntries(formData.entries());
+            data['csrf_token'] = '<?= $csrf_token ?>';
 
             fetch(apiEndpoint, {
                 method: 'POST',
@@ -369,12 +386,17 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(response => response.json())
             .then(result => {
+                FaithXUtils.hideLoading(submitBtn, 'Save Changes');
                 const modal = bootstrap.Modal.getInstance(document.getElementById('editPledgeModal'));
                 modal.hide();
                 showFeedback(result.success ? 'Success' : 'Error', result.message, result.success);
                 if (result.success) {
                     setTimeout(() => location.reload(), 2000);
                 }
+            })
+            .catch(error => {
+               FaithXUtils.hideLoading(submitBtn, 'Save Changes');
+               console.error('Error:', error);
             });
         });
     }
@@ -387,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ action: 'delete_pledge', pledge_id: pledgeId })
+                body: JSON.stringify({ action: 'delete_pledge', pledge_id: pledgeId, csrf_token: '<?= $csrf_token ?>' })
             })
             .then(response => response.json())
             .then(result => {

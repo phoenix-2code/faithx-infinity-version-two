@@ -241,6 +241,7 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="modal-content">
             <form id="quickPledgeForm" class="needs-validation" novalidate>
                 <input type="hidden" name="action" value="create_pledge">
+                <input type="hidden" name="csrf_token" value="<?= $csrf_token ?>">
                 
                 <div class="modal-header">
                     <h5 class="modal-title">Make New Pledge</h5>
@@ -314,6 +315,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = Object.fromEntries(formData.entries());
             
             try {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                if (window.FaithXUtils && window.FaithXUtils.showLoading) {
+                    window.FaithXUtils.showLoading(submitBtn);
+                }
+
                 const response = await fetch('api/pledge_actions.php', {
                     method: 'POST',
                     headers: {
@@ -324,6 +330,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 const result = await response.json();
+                if (window.FaithXUtils && window.FaithXUtils.hideLoading) {
+                    window.FaithXUtils.hideLoading(submitBtn, '<i class="bi bi-check-circle"></i> Create Pledge');
+                }
                 
                 if (result.success) {
                     alert('Pledge created successfully!');

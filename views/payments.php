@@ -305,6 +305,7 @@ $csrf_token = generateCSRFToken();
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="action" value="record_payment">
+                    <input type="hidden" name="csrf_token" value="<?= $csrf_token ?>">
                     <input type="hidden" name="pledge_id" id="modal_pledge_id">
                     
                     <div class="row">
@@ -409,6 +410,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if(recordPaymentForm) {
         recordPaymentForm.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            if (window.FaithXUtils && window.FaithXUtils.showLoading) {
+                window.FaithXUtils.showLoading(submitBtn);
+            }
+
             const formData = new FormData(recordPaymentForm);
             const data = Object.fromEntries(formData.entries());
 
@@ -421,12 +428,22 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => response.json())
             .then(result => {
+                if (window.FaithXUtils && window.FaithXUtils.hideLoading) {
+                    window.FaithXUtils.hideLoading(submitBtn, '<i class="bi bi-check-circle"></i> Record Payment');
+                }
                 showAlert(result.message, result.success ? 'success' : 'danger');
                 if (result.success) {
                     const modal = bootstrap.Modal.getInstance(document.getElementById('recordPaymentModal'));
                     modal.hide();
                     location.reload();
                 }
+            })
+            .catch(error => {
+                if (window.FaithXUtils && window.FaithXUtils.hideLoading) {
+                    window.FaithXUtils.hideLoading(submitBtn, '<i class="bi bi-check-circle"></i> Record Payment');
+                }
+                console.error("Error submitting form", error);
+                showAlert("An expected error occurred.", "danger");
             });
         });
     }

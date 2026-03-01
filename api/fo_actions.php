@@ -62,14 +62,28 @@ try {
 
         case 'update_pledge':
             $pledge_id = intval($input['pledge_id'] ?? 0);
-            // ... other fields to update
+            $amount = floatval($input['amount'] ?? 0);
+            $schedule = trim($input['payment_schedule'] ?? '');
+            $notes = trim($input['notes'] ?? '');
+
+            if (!$pledge_id || $amount <= 0) {
+                throw new Exception('Pledge ID and a valid amount are required.');
+            }
 
             // Check if pledge belongs to the FO's group
             if (!$rbac->canAccessPledge($pledge_id)) {
                 throw new Exception('You do not have permission to update this pledge.');
             }
 
-            // ... update logic
+            $stmt = $pdo->prepare("UPDATE pledges SET amount = ?, payment_schedule = ?, notes = ? WHERE pledge_id = ?");
+            $result = $stmt->execute([$amount, $schedule, $notes, $pledge_id]);
+
+            if ($result) {
+                logAction('update_pledge', 'pledges', $pledge_id, ['amount' => $amount, 'schedule' => $schedule]);
+                echo json_encode(['success' => true, 'message' => 'Pledge updated successfully.']);
+            } else {
+                throw new Exception('Failed to update pledge.');
+            }
             break;
 
         case 'delete_pledge':

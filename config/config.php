@@ -5,7 +5,7 @@
 
 // Environment Configuration
 define('ENVIRONMENT', 'development'); // 'development', 'staging', 'production'
-define('DEBUG_MODE', true);
+define('DEBUG_MODE', false);
 
 // Application Settings
 define('APP_NAME', 'FaithX Infinity');

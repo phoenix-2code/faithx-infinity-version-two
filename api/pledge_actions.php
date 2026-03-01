@@ -16,6 +16,13 @@ if (!isLoggedIn()) {
 
 $input = json_decode(file_get_contents('php://input'), true);
 $action = $input['action'] ?? '';
+$csrf_token = $input['csrf_token'] ?? '';
+
+if (!verifyCSRFToken($csrf_token)) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Security token invalid. Please refresh the page.']);
+    exit;
+}
 
 header('Content-Type: application/json');
 
