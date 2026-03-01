@@ -95,6 +95,15 @@ try {
                 date('Y-m-d')
             ]);
 
+            // Insert into user_group_access table if a group was selected
+            if ($group_id) {
+                $stmt = $pdo->prepare("
+                    INSERT INTO user_group_access (user_id, group_id, access_level) 
+                    VALUES (?, ?, 'member')
+                ");
+                $stmt->execute([$user_id, $group_id]);
+            }
+
             // Log the registration
             logAction('user_registration', 'users', $user_id, ['username' => $username]);
 
