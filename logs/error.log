@@ -1579,3 +1579,127 @@ Database logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Tab
     "request_uri": "\/index.php?page=login"
 }
 --------------------------------------------------------------------------------
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'failed_login_attempts' in 'field list'",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(92): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(38): AuthSystem->isAccountLocked('tester88')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('tester88', 'Password123')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 13:34:21",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+Database logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.error_logs' doesn't exist
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'failed_login_attempts' in 'field list'",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(92): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(38): AuthSystem->isAccountLocked('tester88')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('tester88', 'Password123')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 13:34:21",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.audit_logs' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(320): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(58): AuthSystem->logSecurityEvent('login_failed', 'tester88')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('tester88', 'Password123')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 13:42:57",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+Database logging failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list'
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.audit_logs' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(320): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(58): AuthSystem->logSecurityEvent('login_failed', 'tester88')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('tester88', 'Password123')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 13:42:57",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.audit_logs' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(320): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(58): AuthSystem->logSecurityEvent('login_failed', 'tester88')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('tester88', 'Password123')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 13:43:09",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+Database logging failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list'
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.audit_logs' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(320): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(58): AuthSystem->logSecurityEvent('login_failed', 'tester88')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('tester88', 'Password123')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 13:43:09",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.audit_logs' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(320): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(58): AuthSystem->logSecurityEvent('login_failed', 'sysadmin')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('sysadmin', 'FaithX2025!')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 13:44:54",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+Database logging failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list'
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.audit_logs' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(320): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(58): AuthSystem->logSecurityEvent('login_failed', 'sysadmin')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('sysadmin', 'FaithX2025!')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 13:44:54",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------

@@ -313,8 +313,8 @@ class AuthSystem
     private function logSecurityEvent($event_type, $username = null, $user_id = null)
     {
         $stmt = $this->pdo->prepare("
-            INSERT INTO audit_logs (user_id, action_type, resource_type, resource_id, new_values, ip_address, user_agent)
-            VALUES (?, 'security_event', ?, ?, ?, ?, ?)
+            INSERT INTO audit_trail (user_id, action, table_name, record_id, new_values, ip_address, user_agent, severity)
+            VALUES (?, 'security_event', ?, ?, ?, ?, ?, 'low')
         ");
 
         $stmt->execute([
@@ -339,12 +339,12 @@ class AuthSystem
         $stmt = $this->pdo->prepare("
             SELECT 
                 DATE(created_at) as date,
-                COUNT(CASE WHEN action_type = 'security_event' AND JSON_EXTRACT(new_values, '$.event_type') = 'login_success' THEN 1 END) as successful_logins,
-                COUNT(CASE WHEN action_type = 'security_event' AND JSON_EXTRACT(new_values, '$.event_type') = 'login_failed' THEN 1 END) as failed_logins,
-                COUNT(CASE WHEN action_type = 'security_event' AND JSON_EXTRACT(new_values, '$.event_type') = 'account_locked' THEN 1 END) as locked_accounts
-            FROM audit_logs 
+                COUNT(CASE WHEN action = 'security_event' AND JSON_EXTRACT(new_values, '$.event_type') = 'login_success' THEN 1 END) as successful_logins,
+                COUNT(CASE WHEN action = 'security_event' AND JSON_EXTRACT(new_values, '$.event_type') = 'login_failed' THEN 1 END) as failed_logins,
+                COUNT(CASE WHEN action = 'security_event' AND JSON_EXTRACT(new_values, '$.event_type') = 'account_locked' THEN 1 END) as locked_accounts
+            FROM audit_trail 
             WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL ? DAY)
-            AND action_type = 'security_event'
+            AND action = 'security_event'
             GROUP BY DATE(created_at)
             ORDER BY date DESC
         ");
