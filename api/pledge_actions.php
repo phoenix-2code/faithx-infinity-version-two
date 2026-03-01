@@ -15,6 +15,9 @@ if (!isLoggedIn()) {
 }
 
 $input = json_decode(file_get_contents('php://input'), true);
+if (empty($input)) {
+    $input = $_POST;
+}
 $action = $input['action'] ?? '';
 $csrf_token = $input['csrf_token'] ?? '';
 

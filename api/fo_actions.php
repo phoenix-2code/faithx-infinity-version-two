@@ -27,6 +27,9 @@ if (!$group_id) {
 }
 
 $input = json_decode(file_get_contents('php://input'), true);
+if (empty($input)) {
+    $input = $_POST;
+}
 $action = $input['action'] ?? '';
 
 header('Content-Type: application/json');

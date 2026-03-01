@@ -1703,3 +1703,96 @@ Database logging failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 
     "request_uri": "\/index.php?page=login"
 }
 --------------------------------------------------------------------------------
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(320): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(58): AuthSystem->logSecurityEvent('login_failed', 'sysadmin')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('sysadmin', 'FaithX2025!')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 14:37:35",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+Database logging failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list'
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(320): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(58): AuthSystem->logSecurityEvent('login_failed', 'sysadmin')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('sysadmin', 'FaithX2025!')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 14:37:35",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.temporary_role_assignments' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(178): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(67): AuthSystem->getEffectiveRole('SCOEFX0001', 'system_admin')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('admin', 'FaithX2025!')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 15:54:40",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+Database logging failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'page' in 'field list'
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.temporary_role_assignments' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(178): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(67): AuthSystem->getEffectiveRole('SCOEFX0001', 'system_admin')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('admin', 'FaithX2025!')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 15:54:40",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.temporary_role_assignments' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(178): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(67): AuthSystem->getEffectiveRole('SCOEFX0001', 'system_admin')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('admin', 'FaithX2025!')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 15:59:22",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
+Database logging failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'page' in 'field list'
+{
+    "type": "Application Error",
+    "message": "Page routing error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'faithx_infinity.temporary_role_assignments' doesn't exist",
+    "context": {
+        "page": "login",
+        "user_id": null,
+        "trace": "#0 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(178): PDOStatement->execute(Array)\n#1 C:\\xampp\\htdocs\\faithx\\includes\\auth.php(67): AuthSystem->getEffectiveRole('SCOEFX0001', 'system_admin')\n#2 C:\\xampp\\htdocs\\faithx\\views\\login.php(27): AuthSystem->login('admin', 'FaithX2025!')\n#3 C:\\xampp\\htdocs\\faithx\\index.php(109): include('C:\\\\xampp\\\\htdocs...')\n#4 {main}"
+    },
+    "timestamp": "2026-03-01 15:59:22",
+    "user_id": "anonymous",
+    "ip_address": "::1",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/145.0.0.0 Safari\/537.36",
+    "request_uri": "\/index.php?page=login"
+}
+--------------------------------------------------------------------------------
